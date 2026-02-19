@@ -61,7 +61,7 @@ export function HeroSection() {
           {/* Title */}
           <ScrollReveal direction="up" delay={150}>
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Project 100 Minds | Cohort I (2026)
+              Project 100 Minds | Cohort I 
             </h1>
           </ScrollReveal>
 
