@@ -1,7 +1,26 @@
 "use client"
 
-import { Instagram, Send, Github, Youtube, Twitter, Linkedin, Heart } from "lucide-react"
+import { Instagram, Linkedin, Heart, Mail, Facebook } from "lucide-react"
 import { ScrollReveal } from "./scroll-reveal"
+import { MagneticButton } from "./magnetic-button"
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/devcommunitynepal/",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/devcommunitynepal/",
+  },
+  {
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://www.facebook.com/devcommunitynepalofficial",
+  },
+]
 
 export function Footer() {
   return (
@@ -37,26 +56,29 @@ export function Footer() {
             </div>
           </ScrollReveal>
 
-          {/* Social (non-clickable placeholders) */}
+          {/* Contact & Social */}
           <ScrollReveal direction="up" delay={250}>
             <div>
-              <h4 className="text-white font-semibold mb-4">Social (Coming Soon)</h4>
+              <h4 className="text-white font-semibold mb-4">Contact Us</h4>
+              <MagneticButton>
+                <a
+                  href="mailto:project100minds@devcommunitynepal.org"
+                  className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors mb-6 group"
+                >
+                  <Mail className="w-5 h-5 group-hover:text-purple-400 group-hover:scale-110 transition-all" />
+                  <span>project100minds@devcommunitynepal.org</span>
+                </a>
+              </MagneticButton>
+
+              <h4 className="text-white font-semibold mb-4 mt-6">Follow Us</h4>
               <div className="flex flex-wrap gap-3">
-                {[
-                  { name: "Instagram", icon: Instagram },
-                  { name: "Telegram", icon: Send },
-                  { name: "YouTube", icon: Youtube },
-                  { name: "Github", icon: Github },
-                  { name: "Twitter", icon: Twitter },
-                  { name: "LinkedIn", icon: Linkedin },
-                ].map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center gap-2 px-3 py-2 glass rounded-xl text-gray-400 text-sm cursor-default"
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                  </div>
+                {socialLinks.map((item) => (
+                  <MagneticButton key={item.name} href={item.href}>
+                    <div className="flex items-center gap-2 px-3 py-2 glass rounded-xl text-gray-400 text-sm hover:text-white hover:bg-purple-500/20 transition-all cursor-pointer group">
+                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span>{item.name}</span>
+                    </div>
+                  </MagneticButton>
                 ))}
               </div>
             </div>

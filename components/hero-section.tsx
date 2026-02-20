@@ -61,7 +61,7 @@ export function HeroSection() {
           {/* Title */}
           <ScrollReveal direction="up" delay={150}>
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Project 100 Minds | Cohort I 
+              Project 100 Minds | Cohort I (2026)
             </h1>
           </ScrollReveal>
 
@@ -75,15 +75,15 @@ export function HeroSection() {
 
           {/* CTA Button */}
           <ScrollReveal direction="up" delay={350}>
-            <MagneticButton>
-              <button className="group relative px-8 py-4 rounded-xl overflow-hidden">
+            <MagneticButton href="https://forms.gle/Tm6mdyqAh5v88tWG6">
+              <div className="group relative px-8 py-4 rounded-xl overflow-hidden inline-block cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 animate-gradient-shift" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity blur-xl" />
                 <span className="relative flex items-center gap-2 text-white font-semibold">
                   Apply Now
                   <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                 </span>
-              </button>
+              </div>
             </MagneticButton>
           </ScrollReveal>
         </div>
